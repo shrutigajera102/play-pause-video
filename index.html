@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Background Video Example</title>
+</head>
+<body>
+
+<video id="backgroundVideo" loop muted autoplay>
+  <source src="SampleVideo_1280x720_5mb.mp4" type="video/mp4">
+</video>
+
+<button id="myBtn" onclick="myFunction()">Pause</button>
+
+<script>
+  var video = document.getElementById("backgroundVideo");
+ var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML= "pause";
+  }else {
+    video.pause();
+    btn.innerHTML = "play";
+  }
+}
+
+
+</script>
+
+</body>
+</html>
